@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito&family=Montserrat:wght@300;400;500;600;800&family=Poppins:wght@400;500&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -28,11 +33,111 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .div_1 {
+  opacity: 0;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation: blow infinite 2s linear;
+}*/
+
+@keyframes stretch {
+  /* 0% {
+    opacity: 0;
+     width: 10px;
+    height: 10px;  
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 0.8;
+    width: 12px;
+    height: 12px; 
   }
+  100% {
+     width: 14px;
+    height: 14px; 
+    opacity: 1;
+  } */
+
+  0% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+
+  /* 0% {
+    opacity: 1;
+    transform: scale(0.2);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.6);
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    border: 2px solid white;
+  } */
+}
+
+@keyframes growAndFade {
+  0% {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+  /* 0% {
+    transform: scale(0.1);
+    border-radius: 100%;
+  }
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }*/
+}
+
+.div_2 {
+  background-color: oranged;
+  animation: growAndFade;
+  animation-duration: 15s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.div_1 {
+  /* animation: flash infinite; 
+  animation-duration: 2s;  */
+  /* padding: 1px; */
+  background-color: orangered;
+  border: 2px solid white;
+  animation-name: stretch;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  /* animation-fill-mode: none; */
+  animation-play-state: running;
 }
