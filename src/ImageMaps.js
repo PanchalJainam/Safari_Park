@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Safari_Park from "./Assets/Safari_Park.jpg";
+import river from "./Assets/river.jpg";
 import Model from "./Model/Model";
 import Guide from "./Model/Guide";
 
@@ -31,11 +31,11 @@ const ImageMaps = () => {
 
   return (
     <>
-      <div className="relative main_div md:w-[1555px] ">
+      <div className="md:block hidden relative main_div w-[1555px]">
         <img
           src={park_Map}
           alt="safari_park"
-          className="md:w-[1555px] md:h-[700px] "
+          className="w-[1555px] h-[700px] "
           useMap="#park"
         />
 
@@ -83,8 +83,8 @@ const ImageMaps = () => {
         <div className="div_2 absolute top-[302px] right-[712px] border-2 z-10 border-white w-[12px] h-[12px] rounded-full"></div>
         <div className="div_1 absolute top-[300px] right-[710px] bg-orange-600 w-[16px] h-[16px] rounded-full"></div>
         {/* 13 */}
-        <div className="div_2 absolute top-[366px] right-[802px] border-2 z-10 bg-orange-600 border-white w-[12px] h-[12px] rounded-full"></div>
-        <div className="div_1 absolute top-[364px] right-[800px] w-[16px] h-[16px] bg-orange-600  rounded-full"></div>
+        <div className="div_2 absolute top-[366px] right-[802px] border-2 z-10 bg-orange-600 border-white w-[10px] h-[10px] rounded-full"></div>
+        <div className="div_1 absolute top-[364px] right-[800px] w-[14px] h-[14px] bg-orange-600  rounded-full"></div>
 
         <map name="park">
           <area
@@ -97,7 +97,7 @@ const ImageMaps = () => {
               )
             }
             alt="image1"
-            className=" absolute cursor-pointer"
+            className="absolute cursor-pointer"
           />
 
           {/* image 12 */}
@@ -147,7 +147,7 @@ const ImageMaps = () => {
           {/*----------------------------------- below three Silver lion statue--------------------- */}
 
           <area
-            shape="rect"
+            shape="poly"
             coords="954,347,980,347,980,357,954,354"
             // coords="966,350,977,357"
             onClick={() =>
@@ -305,14 +305,60 @@ const ImageMaps = () => {
             className="absolute  cursor-pointer"
           />
         </map>
-
-        {model === true ? (
-          <Model modelVal={modelVal} onClose={closePopup} />
-        ) : (
-          <></>
-        )}
-        {guide === true ? <Guide onClose={closePopup} /> : <></>}
       </div>
+
+      {/* ---------------------------------------- RESPONSIVE DESIGN  CODE ------------------------------------*/}
+
+      <div className="md:hidden block relative w-[360px] h-[680px] bg-gray-400 ">
+        <img
+          src={river}
+          alt=""
+          useMap="#park2"
+          className=" w-[360px] h-[680px]"
+        />
+        {/* <p className="font-bold text-center pt-4 text-4xl text-gray-300">
+          {" "}
+          360 X 680
+        </p> */}
+        {/* <div className="absolute top-40 bottom-1/2 bg-white w-[320px] h-[300px] p-2 rounded-md">
+          <div className="flex justify-between font-bold">
+            <h2 className="text-green-900">Ambardi Safari Park</h2>
+            <button>X</button>
+          </div>
+          <hr className="mb-2 h-[2px] bg-green-950 outline-none" />
+
+          <div className="bg-gray-200">
+            <img
+              src="https://res.cloudinary.com/dr9kijcga/image/upload/v1701161035/Fibre_Sitting_lion_wv8oqv.jpg"
+              alt=""
+              className="w-[100%] h-[250px]"
+            />
+          </div>
+        </div> */}
+        <map name="park2">
+          <area
+            shape="poly"
+            // coords="410,60,1120,60,1120,95,410,95"
+            // coords="82,604,148,604,155,636,82,636"
+            coords="3,26,326,26,326,89,3,89"
+            onClick={() =>
+              handleModel(
+                "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156944/IMG20231008081809_01_kzpe5c.jpg"
+              )
+            }
+            alt="image1"
+            className="absolute p-2 cursor-pointer"
+          />
+        </map>
+      </div>
+
+      {/* ---------------------------------------- MODEL VISIBLE CODE ------------------------------------*/}
+      {model === true ? (
+        <Model modelVal={modelVal} onClose={closePopup} />
+      ) : (
+        <></>
+      )}
+      {guide === true ? <Guide onClose={closePopup} /> : <></>}
     </>
   );
 };

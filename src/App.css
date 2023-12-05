@@ -117,7 +117,7 @@
 .div_2 {
   background-color: oranged;
   animation: growAndFade;
-  animation-duration: 15s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-delay: 0;
   animation-direction: alternate;

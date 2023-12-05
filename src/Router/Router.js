@@ -9,7 +9,7 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ImageMaps />} />
-          {/* <Route path="/park" element={<Model />} /> */}
+          {/* <Route path="/" element={<Model />} /> */}
         </Routes>
       </BrowserRouter>
     </>
