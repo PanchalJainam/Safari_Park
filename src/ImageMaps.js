@@ -31,7 +31,7 @@ const ImageMaps = () => {
 
   return (
     <>
-      <div className="md:block hidden relative main_div w-[1555px]">
+      <div className="relative main_div w-[1555px] overflow-x-scroll md:overflow-x-hidden">
         <img
           src={park_Map}
           alt="safari_park"
@@ -309,18 +309,18 @@ const ImageMaps = () => {
 
       {/* ---------------------------------------- RESPONSIVE DESIGN  CODE ------------------------------------*/}
 
-      <div className="md:hidden block relative w-[360px] h-[680px] bg-gray-400 ">
+      {/* <div className="md:hidden block relative w-[360px] h-[680px] bg-gray-400 ">
         <img
           src={river}
           alt=""
           useMap="#park2"
           className=" w-[360px] h-[680px]"
         />
-        {/* <p className="font-bold text-center pt-4 text-4xl text-gray-300">
+        <p className="font-bold text-center pt-4 text-4xl text-gray-300">
           {" "}
           360 X 680
-        </p> */}
-        {/* <div className="absolute top-40 bottom-1/2 bg-white w-[320px] h-[300px] p-2 rounded-md">
+        </p>
+        <div className="absolute top-40 bottom-1/2 bg-white w-[320px] h-[300px] p-2 rounded-md">
           <div className="flex justify-between font-bold">
             <h2 className="text-green-900">Ambardi Safari Park</h2>
             <button>X</button>
@@ -334,7 +334,7 @@ const ImageMaps = () => {
               className="w-[100%] h-[250px]"
             />
           </div>
-        </div> */}
+        </div>
         <map name="park2">
           <area
             shape="poly"
@@ -350,7 +350,7 @@ const ImageMaps = () => {
             className="absolute p-2 cursor-pointer"
           />
         </map>
-      </div>
+      </div> */}
 
       {/* ---------------------------------------- MODEL VISIBLE CODE ------------------------------------*/}
       {model === true ? (

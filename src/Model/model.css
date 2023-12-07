@@ -1,0 +1,17 @@
+.park-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  .discount-popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+  }
+}
