@@ -9,7 +9,10 @@ const ImageMaps = () => {
 
   const [guide, setGuide] = useState(false);
   const park_Map =
-    "https://res.cloudinary.com/dr9kijcga/image/upload/v1701152344/You_are_here_map_final_08-11-2023_online_spt2m1.jpg";
+    "https://res.cloudinary.com/dr9kijcga/image/upload/v1701937791/You_are_here_map_final_08-11-2023_online_zmrac8.jpg";
+
+  const responsive_map =
+    "https://res.cloudinary.com/dr9kijcga/image/upload/v1701852647/You_are_here_map_final_08-11-2023_online_ta2vks.jpg";
 
   const closePopup = () => {
     setModel(false);
@@ -31,13 +34,15 @@ const ImageMaps = () => {
 
   return (
     <>
-      <div className="relative main_div w-[1555px] overflow-x-scroll md:overflow-x-hidden">
-        <img
-          src={park_Map}
-          alt="safari_park"
-          className="w-[1555px] h-[700px] "
-          useMap="#park"
-        />
+      <div className="md:block hidden relative">
+        <div className=" w-[1555px] overflow-x-scroll md:overflow-hidden">
+          <img
+            src={park_Map}
+            alt="safari_park"
+            className="w-[1555px] h-[700px]"
+            useMap="#park"
+          />
+        </div>
 
         {/* 1 */}
 
@@ -309,9 +314,9 @@ const ImageMaps = () => {
 
       {/* ---------------------------------------- RESPONSIVE DESIGN  CODE ------------------------------------*/}
 
-      {/* <div className="md:hidden block relative w-[360px] h-[680px] bg-gray-400 ">
+      <div className="md:hidden block relative w-[360px] h-[680px] bg-gray-400 overflow-x-hidden overflow-y-hidden">
         <img
-          src={river}
+          src={responsive_map}
           alt=""
           useMap="#park2"
           className=" w-[360px] h-[680px]"
@@ -320,7 +325,7 @@ const ImageMaps = () => {
           {" "}
           360 X 680
         </p>
-        <div className="absolute top-40 bottom-1/2 bg-white w-[320px] h-[300px] p-2 rounded-md">
+        {/* <div className="absolute top-40 bottom-1/2 bg-white w-[320px] h-[300px] p-2 rounded-md">
           <div className="flex justify-between font-bold">
             <h2 className="text-green-900">Ambardi Safari Park</h2>
             <button>X</button>
@@ -334,9 +339,77 @@ const ImageMaps = () => {
               className="w-[100%] h-[250px]"
             />
           </div>
-        </div>
+        </div> */}
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156944/IMG20231008081809_01_kzpe5c.jpg"
+            )
+          }
+          className="div_2 absolute top-[540px] right-[191.8px] border-2 z-10 border-white w-[10px] h-[10px] rounded-full"
+        ></div>
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156944/IMG20231008081809_01_kzpe5c.jpg"
+            )
+          }
+          className="div_1 absolute top-[539px] right-[190.5px] bg-orange-600 w-[12px] h-[12px] rounded-full"
+        ></div>
+
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701152571/Deer_Male-Female_nwnrtn.jpg"
+            )
+          }
+          className="div_2 absolute top-[438px] right-[180.5px] border-2 z-10 border-white w-[10px] h-[10px] rounded-full"
+        ></div>
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701152571/Deer_Male-Female_nwnrtn.jpg"
+            )
+          }
+          className="div_1 absolute top-[437px] right-[180px] bg-orange-600 w-[12px] h-[12px] rounded-full"
+        ></div>
+
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701164335/Final_q8m6ta.jpg"
+            )
+          }
+          className="div_2 absolute top-[324px] right-[180.5px] border-2 z-10 border-white w-[10px] h-[10px] rounded-full"
+        ></div>
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701164335/Final_q8m6ta.jpg"
+            )
+          }
+          className="div_1 absolute top-[323.5px] right-[180px] bg-orange-600 w-[12px] h-[12px] rounded-full"
+        ></div>
+
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156248/family_fklxkl.jpg"
+            )
+          }
+          className="div_2 absolute top-[360px] right-[139.5px] border-2 z-10 border-white w-[10px] h-[10px] rounded-full"
+        ></div>
+        <div
+          onClick={() =>
+            handleModel(
+              "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156248/family_fklxkl.jpg"
+            )
+          }
+          className="div_1 absolute top-[358px] right-[138px] bg-orange-600 w-[12px] h-[12px] rounded-full"
+        ></div>
+
         <map name="park2">
-          <area
+          {/* <area
             shape="poly"
             // coords="410,60,1120,60,1120,95,410,95"
             // coords="82,604,148,604,155,636,82,636"
@@ -348,9 +421,64 @@ const ImageMaps = () => {
             }
             alt="image1"
             className="absolute p-2 cursor-pointer"
+          /> */}
+
+          <area
+            shape="poly"
+            // coords="410,60,1120,60,1120,95,410,95"
+            // coords="82,604,148,604,155,636,82,636"
+            coords="155,541,167,541,165,588,150,555"
+            onClick={() =>
+              handleModel(
+                "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156944/IMG20231008081809_01_kzpe5c.jpg"
+              )
+            }
+            alt="image1"
+            className="absolute p-2 cursor-pointer"
+          />
+
+          <area
+            shape="poly"
+            // coords="410,60,1120,60,1120,95,410,95"
+            // coords="82,604,148,604,155,636,82,636"
+            coords="165,436,178,436,178,450,165,450"
+            onClick={() =>
+              handleModel(
+                "https://res.cloudinary.com/dr9kijcga/image/upload/v1701152571/Deer_Male-Female_nwnrtn.jpg"
+              )
+            }
+            alt="image1"
+            className="absolute p-2 cursor-pointer"
+          />
+
+          <area
+            shape="poly"
+            // coords="410,60,1120,60,1120,95,410,95"
+            // coords="82,604,148,604,155,636,82,636"
+            coords="190,345,220,345,220,389,190,389"
+            onClick={() =>
+              handleModel(
+                "https://res.cloudinary.com/dr9kijcga/image/upload/v1701156248/family_fklxkl.jpg"
+              )
+            }
+            alt="image1"
+            className="absolute p-2 cursor-pointer"
+          />
+          <area
+            shape="poly"
+            // coords="410,60,1120,60,1120,95,410,95"
+            // coords="82,604,148,604,155,636,82,636"
+            coords="160,317,174,317,174,340,160,340"
+            onClick={() =>
+              handleModel(
+                "https://res.cloudinary.com/dr9kijcga/image/upload/v1701164335/Final_q8m6ta.jpg"
+              )
+            }
+            alt="image1"
+            className="absolute p-2 cursor-pointer"
           />
         </map>
-      </div> */}
+      </div>
 
       {/* ---------------------------------------- MODEL VISIBLE CODE ------------------------------------*/}
       {model === true ? (

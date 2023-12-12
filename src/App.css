@@ -115,7 +115,7 @@
 }
 
 .div_2 {
-  background-color: oranged;
+  background-color: orangered;
   animation: growAndFade;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
@@ -124,6 +124,7 @@
   animation-iteration-count: infinite;
   animation-fill-mode: none;
   animation-play-state: running;
+  cursor: pointer;
 }
 
 .div_1 {
@@ -131,6 +132,7 @@
   animation-duration: 2s;  */
   /* padding: 1px; */
   background-color: orangered;
+  cursor: pointer;
   border: 2px solid white;
   animation-name: stretch;
   animation-duration: 2s;
